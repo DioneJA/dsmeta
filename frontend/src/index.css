@@ -1,1 +1,30 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500&family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    color: rgb(255, 255, 255);
+    background-color: #181818;
+}
+
+a,
+a:hover,
+a:visited {
+    /*Para todas as formas de hyperlinks */
+    color: unset;
+    text-decoration: none;
+}
+#sales{
+    padding: 40px 10px; /* 40 na vertical e 10 na horizontal*/
+}
+.dsmeta-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto; /*Alinha a div ao centro*/
+}

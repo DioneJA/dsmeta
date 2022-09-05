@@ -1,0 +1,89 @@
+.dsmeta-card {
+    background-color: #283142;
+    border-radius: 10px;
+    padding: 30px 10px;
+}
+
+.dsmeta-card h2{
+    color: #676FFF;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.dsmeta-form-control-container{
+    max-width: 300px;
+}
+.dsmeta-form-control{
+    width: 100%;
+    height: 40px;
+    background-color: #1B2532;
+    border: 1px solid #384459;
+    border-radius: 5px;
+    color: #9AAABE;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 20px;
+    margin-bottom: 16px;
+    outline: none;
+}
+
+.dsmeta-sales-table{
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;/*Para evitar problemas de bordas*/
+}
+.dsmeta-sales-table thead{
+    height: 55px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #E9E9E9;
+}
+.dsmeta-sales-table tbody{
+    font-size: 14px;
+    font-weight: 400;
+    color: #CFCFCF;
+    text-align: center;
+}
+.dsmeta-sales-table tbody tr{
+    transition: .3s;
+    height: 74px;
+    border-top: 1px solid #5F6E82;
+}
+.dsmeta-sales-table tbody tr:nth-child(odd){
+    background-color: #242C3B;
+}
+.dsmeta-sales-table tbody tr:hover>td{
+    background-color: #384459;
+}
+.dsmeta-red-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show576{
+    display: none;
+}
+.show992{
+    display: none;
+}
+@media (min-width:576px) {
+    .show576{
+        display: table-cell;/*Display notmal de um elemento de tabela*/
+    }
+    .dsmeta-card{
+        padding: 35px;
+    }
+    .dsmeta-sales-table tbody tr{
+        height: 62px;
+    }
+    .dsmeta-sales-tablet tbody{
+        font-size: 18px;
+    }
+}
+@media (min-width:992px){
+    .show992{
+        display: table-cell;
+    }
+}

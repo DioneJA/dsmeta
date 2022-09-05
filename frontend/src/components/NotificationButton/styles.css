@@ -1,8 +1,3 @@
-.dsmeta-red-btn-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .dsmeta-red-btn{
     transition: .2s;
     display: flex;
