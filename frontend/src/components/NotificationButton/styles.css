@@ -1,0 +1,23 @@
+.dsmeta-red-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dsmeta-red-btn{
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: hsla(357, 100%, 71%, 10%);
+    border: 1px solid #FF6B72;
+    cursor: pointer;
+}
+.dsmeta-red-btn:hover{
+    background-color: hsla(357, 100%, 71%, 25%);
+}
+.dsmeta-red-btn img{
+    width: 19px;
+}
