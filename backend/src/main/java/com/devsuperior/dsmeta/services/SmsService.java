@@ -1,5 +1,7 @@
 package com.devsuperior.dsmeta.services;
 
+import java.text.DecimalFormat;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -32,10 +34,10 @@ public class SmsService {
 		Sale sale = saleRepository.findById(saleId).get();/*Pego a venda pelo id*/
 		String date = sale.getDate().getDayOfMonth() + "/" + sale.getDate().getMonthValue() + "/" + sale.getDate().getYear();
 		String msgDefault = "\n\nOlá! Tudo bem? Espero que sim!\n"
-				+ "Meu nome é Bruno Dionísio Alves, estou apenas testando minha aplicação "
-				+ "Spring + React.\nLink no GitHub: https://github.com/DioneJA/dsmeta." + "\nObrigado!";
+				+ "\nMeu nome é Bruno Dionísio Alves, estou apenas testando minha aplicação "
+				+ "\nSpring + React.\nLink no GitHub: https://github.com/DioneJA/dsmeta." + "\n\nObrigado!";
 		
-		String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " + date  + ", com um total de R$" + String.format("%.2f",  sale.getAmount())+ "vendidos." + msgDefault;
+		String msg = "O vendedor " + sale.getSellerName() + " foi destaque em " + date  + ", com um total de R$" + new DecimalFormat("#,##0.00").format(sale.getAmount()) + " vendidos." + msgDefault;
 		Twilio.init(twilioSid, twilioKey);
 
 		PhoneNumber to = new PhoneNumber(twilioPhoneTo);
